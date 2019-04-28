@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ingrese_monto_en_pesos">Enter amount in Ars</string>
+    <string name="dolares">Dollars</string>
+    <string name="euros">Euros</string>
+    <string name="reales">Brazilian real</string>
+    <string name="convertir">Convert</string>
+    <string name="reset">Reset</string>
+    <string name="resultado">Result</string>
+    <string name="seleccione_una_moneda">Select a Currency</string>
+    <string name="conversor_moneda">Currency Converter</string>
+</resources>

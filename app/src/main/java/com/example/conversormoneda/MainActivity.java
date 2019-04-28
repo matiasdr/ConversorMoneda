@@ -14,9 +14,9 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
     float valor;
-    private final float DOLAR= 44.70f;
-    private final float EURO= 48.70f;
-    private final float REAL= 16.23f;
+    private final float DOLAR= 45f;
+    private final float EURO= 50.17f;
+    private final float REAL= 11.45f;
 
     EditText editValor;
 
@@ -81,23 +81,27 @@ public class MainActivity extends AppCompatActivity {
     private void Convertir() {
         if (editValor.getText().toString().isEmpty()) {
             Toast.makeText(this, "Esto esta vacío", Toast.LENGTH_SHORT).show();
+        } else if(radioGroup.getCheckedRadioButtonId()==-1) {
+            Toast.makeText(this, "No selecciono una moneda", Toast.LENGTH_SHORT).show();
         } else {
-            DecimalFormat format= new DecimalFormat("#.##");
-            float resultado = 0f;
-            valor = Float.parseFloat(String.valueOf(editValor.getText()));
+                DecimalFormat format= new DecimalFormat("#.##");
+                float resultado = 0f;
+                valor = Float.parseFloat(String.valueOf(editValor.getText()));
 
-            if (radioDolar.isChecked()) {
-                resultado = valor / DOLAR;
+                if (radioDolar.isChecked()) {
+                    resultado = valor / DOLAR;
+                }
+                if (radioEuro.isChecked()) {
+                    resultado = valor / EURO;
+                }
+                if (radioReal.isChecked()) {
+                    resultado = valor / REAL;
+                }
+
+                textResultado.setText((String.valueOf(format.format(resultado))));
             }
-            if (radioEuro.isChecked()) {
-                resultado = valor / EURO;
-            }
-            if (radioReal.isChecked()) {
-                resultado = valor / REAL;
-            }
-            textResultado.setText((String.valueOf(format.format(resultado))));
-        }
     }
+
 
     private void Reset(){
         textResultado.setText(null);

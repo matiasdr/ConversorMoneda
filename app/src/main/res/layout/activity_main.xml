@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorLightPrimary"
     tools:context=".MainActivity">
 
     <EditText
@@ -11,28 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Ingrese monto en pesos"
+        android:hint="@string/ingrese_monto_en_pesos"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -65,21 +54,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Dolares" />
+            android:text="@string/dolares" />
 
         <RadioButton
             android:id="@+id/radioEuro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Euros" />
+            android:text="@string/euros" />
 
         <RadioButton
             android:id="@+id/radioReal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Reales" />
+            android:text="@string/reales" />
     </RadioGroup>
 
     <Button
@@ -88,7 +77,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Convertir"
+        android:background="@color/colorAccent"
+        android:text="@string/convertir"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
 
@@ -98,7 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Reset"
+        android:background="@color/colorAccent"
+        android:text="@string/reset"
         app:layout_constraintStart_toEndOf="@+id/btnConvertir"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
 
@@ -107,9 +98,9 @@
         android:layout_width="210dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="Resultado"
+        android:text="@string/resultado"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
@@ -144,11 +135,38 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Seleccione una Moneda"
+        android:text="@string/seleccione_una_moneda"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editValor"
         tools:textColorHint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/conversor1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/conversor_moneda"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>

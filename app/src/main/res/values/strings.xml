@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ConversorMoneda</string>
+    <string name="app_name" translatable="false">ConversorMoneda</string>
+    <string name="ingrese_monto_en_pesos">Ingrese monto en pesos</string>
+    <string name="dolares">Dolares</string>
+    <string name="euros">Euros</string>
+    <string name="reales">Reales</string>
+    <string name="convertir">Convertir</string>
+    <string name="resultado">Resultado</string>
+    <string name="seleccione_una_moneda">Seleccione una Moneda</string>
+    <string name="reset">Reiniciar</string>
+    <string name="conversor_moneda">Conversor Moneda</string>
 </resources>
